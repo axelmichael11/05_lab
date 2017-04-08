@@ -91,7 +91,6 @@ function sumArray(testArray){ //eslint-disable-line
   var c = testArray[2];
   //take the first value from the array of my sum and multiply...
   var firstValue= sumAndMultiply(a,b,c)[0];
-  console.log(firstValue);
   return [firstValue, a+','+b+','+c+' was passed in as an array of numbers, and '+firstValue+' is their sum.'];
 }
 
@@ -113,9 +112,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
+  var a = testArray[0];
+  var b = testArray[1];
+  var c = testArray[2];
+
+  var firstValue = sumAndMultiply(a,b,c)[1];
+  return [firstValue, "The numbers "+a+','+b+','+c+' have a product of '+firstValue+"."];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
